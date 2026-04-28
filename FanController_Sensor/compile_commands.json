@@ -1,0 +1,170 @@
+[
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduinoVariant\\pins_arduino.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark\\pins_arduino.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark\\pins_arduino.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduinoVariant\\pins_arduino.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\HardwareSerial.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\HardwareSerial.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\HardwareSerial.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\HardwareSerial.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\Print.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\Print.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\Print.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\Print.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial115200.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial115200.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial115200.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial115200.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial38400.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial38400.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial38400.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial38400.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial9600.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial9600.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerial9600.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerial9600.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerialErrors.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerialErrors.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\TinyDebugSerialErrors.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\TinyDebugSerialErrors.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\Tone.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\Tone.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\Tone.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\Tone.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\WInterrupts.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\WInterrupts.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\WInterrupts.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\WInterrupts.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\WMath.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\WMath.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\WMath.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\WMath.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\WString.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\WString.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\WString.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\WString.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\hooks.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\hooks.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\hooks.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\hooks.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\main.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\main.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\main.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\main.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\new.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\new.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\new.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\new.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_analog.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_analog.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_analog.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_analog.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_digital.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_digital.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_digital.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_digital.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_pulse.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_pulse.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_pulse.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_pulse.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_shift.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_shift.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny\\wiring_shift.c",
+        "output": ".pio\\build\\digispark-run-debug\\FrameworkArduino\\wiring_shift.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\DigiCDC.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\DigiCDC.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\DigiCDC.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\DigiCDC.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\oddebug.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\oddebug.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\oddebug.c",
+        "output": ".pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\oddebug.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\osccal.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\osccal.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\osccal.c",
+        "output": ".pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\osccal.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\usbdrv.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\usbdrv.c",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\usbdrv.c",
+        "output": ".pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\usbdrv.c.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -mmcu=attiny85 -x assembler-with-cpp -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark -c -o .pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\usbdrvasm.S.o C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\usbdrvasm.S",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "C:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC\\usbdrvasm.S",
+        "output": ".pio\\build\\digispark-run-debug\\lib913\\DigisparkCDC\\usbdrvasm.S.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\src\\eeprom_log.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Isrc -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark src\\eeprom_log.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "src\\eeprom_log.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\src\\eeprom_log.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\src\\main.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Isrc -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark src\\main.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "src\\main.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\src\\main.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\digispark-run-debug\\src\\tachometer.cpp.o -c -std=gnu++17 -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=attiny85 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60119 -DARDUINO_AVR_DIGISPARK -DMODE_RUN -DDEBUG=1 -DF_CPU=16500000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Isrc -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\libraries\\DigisparkCDC -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\cores\\dtiny -IC:\\Users\\Nielotz\\.platformio\\packages\\framework-arduino-avr-digistump\\variants\\digispark src\\tachometer.cpp",
+        "directory": "D:\\Github\\FanController\\FanController_Sensor",
+        "file": "src\\tachometer.cpp",
+        "output": ".pio\\build\\digispark-run-debug\\src\\tachometer.cpp.o"
+    }
+]

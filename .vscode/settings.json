@@ -1,0 +1,10 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "pio": true
+    },
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}\\FanController_Sensor\\compile_commands.json",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}\\FanController_Sensor",
+        "--query-driver=C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\**"
+    ]
+}

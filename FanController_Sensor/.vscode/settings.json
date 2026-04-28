@@ -1,0 +1,19 @@
+{
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}\\compile_commands.json",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}",
+        "--query-driver=C:\\Users\\Nielotz\\.platformio\\packages\\toolchain-atmelavr\\bin\\**",
+        /// Make indent 4 spaces instead of 2 spaces
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "pio": true,
+        "C:\\Users\\Nielotz\\.platformio\\penv\\Scripts\\platformio.exe": true
+    },
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.doxygen.generatedStyle": "/**",
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    }
+}
