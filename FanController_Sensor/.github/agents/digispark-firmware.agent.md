@@ -30,7 +30,7 @@ You are an expert embedded systems firmware engineer specializing in ATtiny85-ba
 
 - **Flash**: 8 KB total; bootloader uses ~2 KB → ~6 KB available
 - **SRAM**: 512 bytes — avoid dynamic allocation, minimize stack depth
-- **No `Serial`** in production builds; use debug macros guarded by `#ifdef DEBUG`
+- **No `Serial`** in production builds; use debug macros guarded by `#ifdef DEBUG_PRINT`
 - **No Arduino stdlib bloat**: prefer direct register access for timing-critical code
 - **Avoid floating point** where possible — use integer math scaled by 100 or 256
 - DO NOT implement microphone or buzzer features — out of scope for now

@@ -4,7 +4,7 @@
 
 #include "config.h"
 
-#if defined(MODE_RETRIEVE) || DEBUG
+#if defined(MODE_RETRIEVE) || DEBUG_PRINT
 #include "DigiCDC.h"
 #endif
 
@@ -50,7 +50,7 @@ static inline uint8_t readByte(uint16_t byteOffset) {
     return eeprom_read_byte(reinterpret_cast<const uint8_t *>(static_cast<uintptr_t>(byteOffset)));
 }
 
-#if defined(MODE_RETRIEVE) || DEBUG
+#if defined(MODE_RETRIEVE) || DEBUG_PRINT
 static inline char hexDigit(uint8_t nibble) {
     return (nibble < 10) ? static_cast<char>('0' + nibble) : static_cast<char>('A' + (nibble - 10));
 }
@@ -88,7 +88,7 @@ bool record(uint8_t t1, uint8_t t2, uint8_t t3) {
 }
 
 void dumpRaw() {
-#if defined(MODE_RETRIEVE) || DEBUG
+#if defined(MODE_RETRIEVE) || DEBUG_PRINT
     const uint16_t eepromBytes = EEPROM_SIZE;
 
     SerialUSB.print("EEPROM:512\r\n");

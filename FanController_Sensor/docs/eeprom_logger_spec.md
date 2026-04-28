@@ -8,7 +8,7 @@ The firmware has three independently flashed builds sharing the same source tree
 |-------|-----------|--------|
 | **RECORD** | PB5/PB3/PB4 as ADC | Reads three thermometers, logs to EEPROM at variable intervals. No USB, no fan/tach. |
 | **RETRIEVE** | PB3/PB4 as DigiCDC USB | Dumps raw EEPROM hex over USB. Erases EEPROM **only on explicit user command**. |
-| **RUN** | PB5/PB3/PB4 as ADC; PB1 PWM; PB2 tach | Fan controller with all three thermometers. PB3/PB4 used for USB only when `-DDEBUG` — in that case TEMP2/TEMP3 are unavailable. |
+| **RUN** | PB5/PB3/PB4 as ADC; PB1 PWM; PB2 tach | Fan controller with all three thermometers. PB3/PB4 used for USB only when `-DDEBUG_PRINT` — in that case TEMP2/TEMP3 are unavailable. |
 
 Record decoding (unpack) is done entirely **on the PC** from the raw hex dump — no unpack logic is needed in firmware.
 
@@ -66,8 +66,8 @@ framework      = arduino
 targets        = buildprog, compiledb
 extra_scripts  = extra_scripts.py
 build_flags    = -std=gnu++1z -DMODE_RUN
-; add -DDEBUG to enable DigiCDC serial output (disables TEMP2/TEMP3, uses PB3/PB4 for USB)
-; add -DDEBUG to digispark-run build_flags, or create a separate env:
+; add -DDEBUG_PRINT to enable DigiCDC serial output (disables TEMP2/TEMP3, uses PB3/PB4 for USB)
+; add -DDEBUG_PRINT to digispark-run build_flags, or create a separate env:
 
 [env:digispark-run-debug]
 platform       = atmelavr
@@ -76,7 +76,7 @@ framework      = arduino
 targets        = buildprog, compiledb
 extra_scripts  = extra_scripts.py
 lib_deps       = DigisparkCDC
-build_flags    = -std=gnu++1z -DMODE_RUN -DDEBUG
+build_flags    = -std=gnu++1z -DMODE_RUN -DDEBUG_PRINT
 ```
 
 ---
@@ -262,7 +262,7 @@ namespace eeprom_log {
 
 ## 10. Source File Structure
 
-Each mode lives in its own `.hpp` file (not `.cpp`) and defines `mode_setup()` + `mode_loop()`. `main.cpp` `#include`s exactly one of them — forming a single translation unit so the compiler can inline freely. PlatformIO auto-compiles all `.cpp` files in `src/`, so `.hpp` avoids double-compilation with no `src_filter` needed. `#ifdef DEBUG` affects `debug.h` internals **and** RUN-mode sensor availability because PB3/PB4 are shared with DigiCDC.
+Each mode lives in its own `.hpp` file (not `.cpp`) and defines `mode_setup()` + `mode_loop()`. `main.cpp` `#include`s exactly one of them — forming a single translation unit so the compiler can inline freely. PlatformIO auto-compiles all `.cpp` files in `src/`, so `.hpp` avoids double-compilation with no `src_filter` needed. `#ifdef DEBUG_PRINT` affects `debug.h` internals **and** RUN-mode sensor availability because PB3/PB4 are shared with DigiCDC.
 
 ```
 src/
@@ -274,7 +274,7 @@ src/
   temperature.cpp/h
   fan.cpp/h
   tachometer.cpp/h
-  debug.h           — all debug functions are no-ops unless DEBUG defined
+  debug.h           — all debug functions are no-ops unless DEBUG_PRINT defined
   config.h
 ```
 
@@ -343,8 +343,8 @@ void mode_loop() {
 ### mode_run.hpp
 ```c
 void mode_setup() {
-    debug::init();           // no-op unless DEBUG defined; init DigiCDC if DEBUG
-#ifdef DEBUG
+    debug::init();           // no-op unless DEBUG_PRINT defined; init DigiCDC if DEBUG_PRINT
+#ifdef DEBUG_PRINT
     temperature::init();     // ADC0 only — PB3/PB4 used by DigiCDC
 #else
     temperature::init();     // ADC0, ADC2, ADC3
@@ -371,14 +371,14 @@ void mode_loop() {
 | File | Change |
 |------|--------|
 | `platformio.ini` | Add `digispark-record`, `digispark-retrieve`, `digispark-run`, `digispark-run-debug` environments while preserving shared build settings such as `extra_scripts`, `lib_extra_dirs`, `targets`, and `-std=gnu++1z` |
-| `config.h` | Add `PIN_TEMP2` (PB3/ADC3), `PIN_TEMP3` (PB4/ADC2), `EEPROM_RECORDS 256` as `uint16_t`; ref stays 1.1V; add `PHASE1_RECORDS 30`, `PHASE2_RECORDS 50`, `RECORD_INTERVAL1_MS`, `RECORD_INTERVAL2_MS`, `RECORD_INTERVAL`, `static inline recordIntervalMs(uint16_t)`, and remove any hardcoded `DEBUG` macro so debug is controlled only by `build_flags` |
+| `config.h` | Add `PIN_TEMP2` (PB3/ADC3), `PIN_TEMP3` (PB4/ADC2), `EEPROM_RECORDS 256` as `uint16_t`; ref stays 1.1V; add `PHASE1_RECORDS 30`, `PHASE2_RECORDS 50`, `RECORD_INTERVAL1_MS`, `RECORD_INTERVAL2_MS`, `RECORD_INTERVAL`, `static inline recordIntervalMs(uint16_t)`, and remove any hardcoded `DEBUG_PRINT` macro so debug is controlled only by `build_flags` |
 | `temperature.h` | Add `ADC2`, `ADC3`; add `readTemp2C()`, `readTemp3C()`; ref = `INTERNAL_1_1V` |
 | `eeprom_log.h` | New API: `init_record` returns the resume index, `record`, `dumpRaw`, `eraseAll` — no unpack, no idxToMin |
 | `eeprom_log.cpp` | Full rewrite: `static inline pack()`, `static inline packedIsValid()`, `init_record` (scan/resume), `record`, `dumpRaw`, `eraseAll` |
 | `main.cpp` | Single-TU dispatcher: `#include`s one `.hpp` based on `MODE_*`; `setup()`/`loop()` call `mode_setup()`/`mode_loop()` |
 | `mode_record.hpp` | New: RECORD mode — phase-aware resume, `g_rec_count` restored from EEPROM scan, increment only on successful write |
 | `mode_retrieve.hpp` | New: RETRIEVE mode — explicit `'D'` dump command and `'E'` erase command |
-| `mode_run.hpp` | New: RUN mode — fan control; `#ifdef DEBUG` selects 1 vs 3 thermometers because PB3/PB4 are shared with DigiCDC |
+| `mode_run.hpp` | New: RUN mode — fan control; `#ifdef DEBUG_PRINT` selects 1 vs 3 thermometers because PB3/PB4 are shared with DigiCDC |
 | `tools/decode_eeprom.py` | New PC-side script: reads zero-padded space-separated hex dump, rejects invalid packed words, corrects elapsed-minute mapping, outputs CSV |
 
 ---

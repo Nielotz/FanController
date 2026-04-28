@@ -5,7 +5,7 @@
 #include "config.h"
 #include "debug.h"
 #include "fan.hpp"
-#include "tachometer.h"
+#include "tachometer.hpp"
 #include "temperature.h"
 
 static Time g_lastControlMs = 0;

@@ -6,6 +6,7 @@
 #include "debug.h"
 
 namespace fan {
+static constexpr debug::Logger<debug::Level::INFO> logger;
 // PB1 / OC1A — hardware PWM output
 static constexpr uint8_t PWM_PIN = 1;
 // OCR1C TOP value: 16500000 / (4 * 25000) - 1 = 164
@@ -15,7 +16,7 @@ inline static constexpr uint8_t PWM_TOP = 164;
 // F_CPU = 16500000 Hz, prescaler = PCK/4, TOP = 164 → actual 25000 Hz.
 // Inlined: one callsite (setup), no module state.
 inline void PWMInit() {
-    debug::info("Initializing Fan PWM...\n");
+    logger.info("Initializing Fan PWM...\n");
     pinMode(PWM_PIN, OUTPUT);
     OCR1C = PWM_TOP;
     OCR1A = 0;

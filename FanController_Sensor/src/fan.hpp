@@ -7,6 +7,7 @@
 #include "debug.h"
 
 namespace fan {
+static constexpr debug::Logger<debug::Level::INFO> logger;
 
 // Timer1 Fast PWM TOP (OCR1C).
 // Timer counts 0..TOP (TOP+1 ticks) then resets, so:
@@ -22,7 +23,7 @@ inline uint8_t s_dutyPct = 0;
 // F_CPU = 16500000 Hz, prescaler = PCK/4, TOP = 164 → actual 25000 Hz.
 // Inlined: one callsite (setup), no module state.
 inline void PWMInit() {
-    debug::info("Initializing Fan PWM...\n");
+    logger.info("Initializing Fan PWM...\n");
     pinMode(PIN_FAN_PWM, OUTPUT);
     OCR1C = PWM_TOP;
     OCR1A = 0;
@@ -37,15 +38,15 @@ inline void PWMInit() {
 // else → hardware Fast PWM
 inline void setDuty(uint8_t pct) {
     if (pct == 0) {
-        debug::info("Setting fan duty to 0%\n");
+        logger.info("Setting fan duty to 0%\n");
         TCCR1 &= ~((1 << COM1A1) | (1 << COM1A0));
         digitalWrite(PIN_FAN_PWM, LOW);
     } else if (pct >= 100) {
-        debug::info("Setting fan duty to 100%\n");
+        logger.info("Setting fan duty to 100%\n");
         TCCR1 &= ~((1 << COM1A1) | (1 << COM1A0));
         digitalWrite(PIN_FAN_PWM, HIGH);
     } else {
-        // debug::info("Setting fan duty to %d%\n", pct);
+        logger.info("Setting fan duty to %d%\n", pct);
         TCCR1 = (TCCR1 & ~(1 << COM1A0)) | (1 << COM1A1);
         OCR1A = (uint8_t)(((uint16_t)pct * ((uint16_t)PWM_TOP + 1)) / 100);
     }
