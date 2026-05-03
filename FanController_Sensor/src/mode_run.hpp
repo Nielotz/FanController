@@ -31,7 +31,7 @@ static inline void controlLoop(Time now) {
     const uint8_t tempC = temperature::readCelsius();
     const uint8_t duty = tempToDuty(tempC);
     fan::setDuty(duty);
-    const uint16_t rpm = tachometer::calcRPM();
+    const uint16_t rpm = tachometer::update();
     debug::recordState(now, tempC, duty, rpm);
 }
 

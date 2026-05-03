@@ -1,11 +1,10 @@
 #pragma once
 #include <stdint.h>
-#include <Arduino.h>
 
-#if DEBUG_PRINT
+#if DEBUG_ENABLED
     #include "DigiCDC.h"
 #else
-    #define DEBUG_PRINT 0
+    #define DEBUG_ENABLED 0
 
 // SerialUSB is a non-dependent name: it is looked up at template definition
 // time, not instantiation time. Even a discarded if constexpr branch must
@@ -19,7 +18,6 @@ namespace { struct _NoOpSerial {
 #endif
 
 namespace debug {
-
 enum class Level : uint8_t {
     ERROR,
     WARNING,
@@ -29,7 +27,7 @@ enum class Level : uint8_t {
 bool constexpr operator>=(Level a, Level b) { return static_cast<uint8_t>(a) >= static_cast<uint8_t>(b); }
 
 inline void init() {
-    if constexpr (DEBUG_PRINT) { SerialUSB.begin(); }
+    if constexpr (DEBUG_ENABLED) { SerialUSB.begin(); }
 }
 
 // Emit one telemetry line per control tick over DigiCDC serial.
@@ -39,7 +37,7 @@ inline void init() {
 //   dutyPct — fan duty cycle 0–100
 //   rpm     — tachometer RPM
 inline void recordState(uint32_t now, int16_t tempC, uint8_t dutyPct, uint16_t rpm) {
-    if constexpr (DEBUG_PRINT) {
+    if constexpr (DEBUG_ENABLED) {
         SerialUSB.print(static_cast<uint16_t>(now));
         SerialUSB.print(" ");
         SerialUSB.print(tempC);
@@ -62,7 +60,7 @@ template <Level setLevel>
 struct Logger {
     template <typename... Args>
     inline void error(const Args&... args) const {
-        if constexpr (DEBUG_PRINT && setLevel >= Level::ERROR) {
+        if constexpr (DEBUG_ENABLED && setLevel >= Level::ERROR) {
             SerialUSB.print("E: ");
             (SerialUSB.print(args), ...);
         } else {
@@ -72,7 +70,7 @@ struct Logger {
 
     template <typename... Args>
     inline void warning(const Args&... args) const {
-        if constexpr (DEBUG_PRINT && setLevel >= Level::WARNING) {
+        if constexpr (DEBUG_ENABLED && setLevel >= Level::WARNING) {
             SerialUSB.print("W: ");
             (SerialUSB.print(args), ...);
         } else {
@@ -82,7 +80,7 @@ struct Logger {
 
     template <typename... Args>
     inline void info(const Args&... args) const {
-        if constexpr (DEBUG_PRINT && setLevel >= Level::INFO) {
+        if constexpr (DEBUG_ENABLED && setLevel >= Level::INFO) {
             SerialUSB.print("I: ");
             (SerialUSB.print(args), ...);
         } else {
@@ -92,7 +90,7 @@ struct Logger {
 
     template <typename... Args>
     inline void debug(const Args&... args) const {
-        if constexpr (DEBUG_PRINT && setLevel >= Level::DEBUG) {
+        if constexpr (DEBUG_ENABLED && setLevel >= Level::DEBUG) {
             SerialUSB.print("D: ");
             (SerialUSB.print(args), ...);
         } else {
@@ -103,7 +101,7 @@ struct Logger {
 
 // Must be called regularly from loop() to keep the DigiCDC USB stack alive.
 inline void update() {
-    if constexpr (DEBUG_PRINT) { SerialUSB.refresh(); }
+    if constexpr (DEBUG_ENABLED) { SerialUSB.refresh(); }
 }
 
 } // namespace debug

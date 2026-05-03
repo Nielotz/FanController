@@ -1,3 +1,4 @@
 /FanController_Proxy/.pio
 *.bkp
 FanController_Proxy/compile_commands.json
+FanController_Sensor/compile_commands.json

@@ -1,22 +1,38 @@
 #pragma once
-#include <Arduino.h>
 
 // Temperature thresholds (°C). Fan is fully off below MIN, at 100% above MAX.
+#include <stdint.h>
+
 static constexpr int8_t TEMP_MIN_C           = 40;
 static constexpr int8_t TEMP_MAX_C           = 70;
 
 static constexpr uint8_t TEMP_RANGE = TEMP_MAX_C - TEMP_MIN_C;
 
+// Used only for estimates, if real RPM exceeds this value we may get invalid readouts
+static constexpr uint16_t FAN_MAX_SPEED_RPM = 2000;
+
 // Fan duty cycle floor (%) when temp is between MIN and MAX.
-static constexpr uint8_t FAN_MIN_DUTY         = 20;
-static constexpr uint8_t FAN_MAX_DUTY         = 100;
-static constexpr uint8_t FAN_RANGE            = FAN_MAX_DUTY - FAN_MIN_DUTY;
+static constexpr uint8_t FAN_MIN_DUTY = 20;  // Min duty cycle to order
+static constexpr uint8_t FAN_MAX_DUTY = 100; // Max duty cycle to order
+static constexpr uint8_t FAN_RANGE = FAN_MAX_DUTY - FAN_MIN_DUTY;
+
+// Tachometer: minimum RPM to consider valid
+static constexpr uint16_t TACH_MIN_RPM  = 200;
 
 // Tachometer: pulses per revolution (standard PC fans emit 2 pulses/rev)
 static constexpr uint8_t TACH_PULSES_PER_REV  = 2;
 
+// Tachometer: number of samples to average for RPM calculation
+static constexpr uint16_t TACH_SAMPLES_TO_AVG = 5;
+
+// Tachometer: delay(ms) between samples (if fan stopped)
+static constexpr uint16_t TACH_ZERO_SAMPLE_MS = 2000;
+
 // Fault detection: if RPM == 0 while duty > 0 for this long → fault
 static constexpr uint16_t FAN_FAULT_TIMEOUT_MS = 3000UL;
+
+static constexpr uint16_t MS_IN_MINUTE = 60000;
+static constexpr uint32_t MAX_MS_BETWEEN_PULSES = MS_IN_MINUTE / (TACH_MIN_RPM * TACH_PULSES_PER_REV);
 
 // Control loop period (ms)
 static constexpr uint16_t LOOP_DELAY_MS        = 500;
