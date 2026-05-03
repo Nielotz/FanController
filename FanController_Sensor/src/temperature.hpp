@@ -14,7 +14,7 @@ enum class RefVoltage : uint16_t {
     INTERNAL_2_56V = 2560,
 };
 
-enum Prescaler : uint8_t {
+enum class Prescaler : uint8_t {
     DIV128 = 0x07,
 };
 
@@ -31,6 +31,7 @@ inline uint8_t refBits(RefVoltage refV) {
 inline void startConversion() {
     ADCSRA |= (1 << ADSC);
     while ((ADCSRA & (1 << ADSC)) != 0) {
+        // Wait for conversion to complete
     }
 }
 
@@ -40,12 +41,11 @@ inline void configure(RefVoltage refV, uint8_t precisionBits, Prescaler prescale
     }
 
     ADMUX = (1 << ADLAR) | refBits(refV);
-    ADCSRA = (1 << ADEN) | prescaler;
+    ADCSRA = (1 << ADEN) | static_cast<uint8_t>(prescaler);
 }
 
 inline uint8_t read8(Adc adc) {
     ADMUX = (ADMUX & 0xF0) | static_cast<uint8_t>(adc);
-    startConversion();
     startConversion();
     return ADCH;
 }
@@ -63,24 +63,18 @@ constexpr uint8_t MV_PER_CELSIUS = 10;
 constexpr uint16_t ADC_STEPS = 1u << ACCURACY_BITS;
 
 inline uint8_t rawToCelsius(uint8_t raw) {
-    const uint16_t millivolts =
-        static_cast<uint16_t>((static_cast<uint32_t>(raw) * static_cast<uint16_t>(ADC_REF_MV)) / ADC_STEPS);
-    if (millivolts <= OFFSET_AT_0_CELSIUS_MV) {
+    const uint16_t mv = static_cast<uint16_t>((static_cast<uint32_t>(raw) * static_cast<uint16_t>(ADC_REF_MV)) / ADC_STEPS);
+    if (mv <= OFFSET_AT_0_CELSIUS_MV) {
         return 0;
     }
-    return static_cast<uint8_t>((millivolts - OFFSET_AT_0_CELSIUS_MV) / MV_PER_CELSIUS);
+    return static_cast<uint8_t>((mv - OFFSET_AT_0_CELSIUS_MV) / MV_PER_CELSIUS);
 }
 
-inline uint8_t readTempC(adc::Adc channel) {
-    return rawToCelsius(adc::read8(channel));
-}
+inline uint8_t readTempC(adc::Adc channel) { return rawToCelsius(adc::read8(channel)); }
 
 inline uint8_t readTemp1C() { return readTempC(adc::Adc::ADC0); }
-
 inline uint8_t readTemp2C() { return readTempC(adc::Adc::ADC3); }
-
 inline uint8_t readTemp3C() { return readTempC(adc::Adc::ADC2); }
-
 inline uint8_t readCelsius() { return readTemp1C(); }
 
 inline void init() { adc::configure(ADC_REF_MV, ACCURACY_BITS, ADC_PRESCALER); }
